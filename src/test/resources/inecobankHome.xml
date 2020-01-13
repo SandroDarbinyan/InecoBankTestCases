@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="InecoBank" verbose="1">
+	<test name="Pages">
+		<classes>
+			<class name="am.inecobank.header.InecoBankHeaderPageTest"/> 
+			<class name="am.inecobank.menu.InecoBankMenuPageTest"></class>
+		</classes>
+	</test>
+</suite>
