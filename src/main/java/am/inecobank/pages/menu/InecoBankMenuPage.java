@@ -6,14 +6,20 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import am.inecbank.pages.social.InecoBankSocialPage;
+import am.inecobank.inecoSave.InecoBankInecoSavePage;
 import am.inecobank.pages.accountPackages.InecoBankAccountPackagesPage;
 import am.inecobank.pages.base.InecoBankBasePageObject;
+import am.inecobank.pages.bonds.InecoBankBondsPage;
+import am.inecobank.pages.clickOnlineLoans.InecoBankClickOnlineLoansPage;
+import am.inecobank.pages.deposits.InecoBankDepositsPage;
 import am.inecobank.pages.escrow.InecoBankEscrowPage;
+import am.inecobank.pages.flexibleDeposit.InecoBankFlexibleDepositPage;
 import am.inecobank.pages.inecoOne.InecoBankInecoOnePage;
-import am.inecobank.pages.inecoSave.InecoBankInecoSavePage;
 import am.inecobank.pages.pension.InecoBankPensionPage;
+import am.inecobank.pages.purpose.InecoBankPurposePage;
 import am.inecobank.pages.signIn.InecoBankSignInPage;
 import am.inecobank.pages.signUp.InecoBankSignUpPage;
+import am.inecobank.pages.simpleDeposit.InecoBankSimpleDepositPage;
 import am.inecobank.pages.specialAccounts.InecoBankSpecialAccountsPage;
 import am.inecobank.pages.standard.InecoBankStandardPage;
 
@@ -44,8 +50,8 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 	@FindBy(xpath = InecoBankMenuPageXpaths.SPECIAL_ACCOUNTS_BTN)
 	public WebElement specialAccountsBtn;
 	
-	@FindBy(xpath = InecoBankMenuPageXpaths.INECO_SAVE_BTN)
-	public WebElement inecoSaveBtn;
+	@FindBy(xpath = InecoBankMenuPageXpaths.INECO_SAVE_ACCOUNTS_BTN)
+	public WebElement inecoSaveAccountsBtn;
 	
 	@FindBy(xpath = InecoBankMenuPageXpaths.ESCROW_BTN)
 	public WebElement escrowBtn;
@@ -55,6 +61,33 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 	
 	@FindBy(xpath = InecoBankMenuPageXpaths.SOCIAL_BTN)
 	public WebElement socialBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.SAVINGS_BTN)
+    public WebElement savingsBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.DEPOSITS_BTN)
+    public WebElement depositsBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.SIMPLE_DEPOSIT_BTN)
+    public WebElement simpleDepositBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.FLEXIBLE_DEPOSIT_BTN)
+    public WebElement flexibleDepositBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.INECO_SAVE_SAVINGS_BTN)
+    public WebElement inecoSaveSavingsBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.PURPOSE_BTN)
+    public WebElement purposeBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.BONDS_BTN)
+    public WebElement bondsBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.LOANS_BTN)
+    public WebElement loansBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.CLICK_ONLINE_LOANS_BTN)
+    public WebElement clickOnlineLoansBtn;
 	
 	public InecoBankSignInPage goToSignInPage() {
 		signInBtn.click();
@@ -92,8 +125,8 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 		return new InecoBankSpecialAccountsPage(driver);
 	}
  
-	public InecoBankInecoSavePage goToInecoSavePage() {
-		inecoSaveBtn.click();
+	public InecoBankInecoSavePage goToInecoSaveAccountsPage() {
+		inecoSaveAccountsBtn.click();
 		return new InecoBankInecoSavePage(driver);
 	}
 	
@@ -111,5 +144,43 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 		socialBtn.click();
 		return new InecoBankSocialPage(driver);
 	}
+	
+	
+	public InecoBankDepositsPage goToDepositsPage() {
+		depositsBtn.click();
+		return new InecoBankDepositsPage(driver);
+	}
+	
+	public InecoBankSimpleDepositPage goToSimpleDepositPage() {
+		simpleDepositBtn.click();
+		return new InecoBankSimpleDepositPage(driver);
+	}
+	
+	public InecoBankFlexibleDepositPage goToFlexibleDepositPage() {
+		flexibleDepositBtn.click();
+		return new InecoBankFlexibleDepositPage(driver);
+	}
+	
+	public InecoBankInecoSavePage goToInecoSaveSavingsPage() {
+		inecoSaveSavingsBtn.click();
+		return new InecoBankInecoSavePage(driver);
+	}
+	
+	public InecoBankPurposePage goToPurposePage() {
+		purposeBtn.click();
+		return new InecoBankPurposePage(driver);
+	} 
+	
+	public InecoBankBondsPage goToBondsPage() {
+		bondsBtn.click();
+		return new InecoBankBondsPage(driver);
+	}
+	
+	
+	public InecoBankClickOnlineLoansPage goToClickOnlineLoansPage() {
+		clickOnlineLoansBtn.click();
+		return new InecoBankClickOnlineLoansPage(driver);
+	}
+	
 	
 }

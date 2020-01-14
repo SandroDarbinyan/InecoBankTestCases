@@ -6,21 +6,33 @@ import org.testng.annotations.Test;
 import am.inecbank.pages.social.InecoBankSocialPage;
 import am.inecbank.pages.social.InecoBankSocialPageXpaths;
 import am.inecobank.base.InecoBankBaseTest;
+import am.inecobank.inecoSave.InecoBankInecoSavePage;
+import am.inecobank.inecoSave.InecoBankInecoSavePageXpaths;
 import am.inecobank.pages.accountPackages.InecoBankAccountPackagesPage;
 import am.inecobank.pages.accountPackages.InecoBankAccountPackagesPageXpaths;
+import am.inecobank.pages.bonds.InecoBankBondsPage;
+import am.inecobank.pages.bonds.InecoBankBondsPageXpaths;
+import am.inecobank.pages.clickOnlineLoans.InecoBankClickOnlineLoansPage;
+import am.inecobank.pages.clickOnlineLoans.InecoBankClickOnlineLoansPageXpaths;
+import am.inecobank.pages.deposits.InecoBankDepositsPage;
+import am.inecobank.pages.deposits.InecoBankDepositsPageXpaths;
 import am.inecobank.pages.escrow.InecoBankEscrowPage;
 import am.inecobank.pages.escrow.InecoBankEscrowPageXpaths;
+import am.inecobank.pages.flexibleDeposit.InecoBankFlexibleDepositPage;
+import am.inecobank.pages.flexibleDeposit.InecoBankFlexibleDepositPageXpaths;
 import am.inecobank.pages.inecoOne.InecoBankInecoOnePage;
 import am.inecobank.pages.inecoOne.InecoBankInecoOnePageXpaths;
-import am.inecobank.pages.inecoSave.InecoBankInecoSavePage;
-import am.inecobank.pages.inecoSave.InecoBankInecoSavePageXpaths;
 import am.inecobank.pages.menu.InecoBankMenuPage;
 import am.inecobank.pages.pension.InecoBankPensionPage;
 import am.inecobank.pages.pension.InecoBankPensionPageXpaths;
+import am.inecobank.pages.purpose.InecoBankPurposePage;
+import am.inecobank.pages.purpose.InecoBankPurposePageXpaths;
 import am.inecobank.pages.signIn.InecoBankSignInPage;
 import am.inecobank.pages.signIn.InecoBankSignInPageXpaths;
 import am.inecobank.pages.signUp.InecoBankSignUpPage;
 import am.inecobank.pages.signUp.InecoBankSignUpPageXpaths;
+import am.inecobank.pages.simpleDeposit.InecoBankSimpleDepositPage;
+import am.inecobank.pages.simpleDeposit.InecoBankSimpleDepositPageXpaths;
 import am.inecobank.pages.specialAccounts.InecoBankSpecialAccountsPage;
 import am.inecobank.pages.specialAccounts.InecoBankSpecialAccountsPageXpaths;
 import am.inecobank.pages.standard.InecoBankStandardPage;
@@ -123,15 +135,15 @@ public class InecoBankMenuPageTest extends InecoBankBaseTest {
 	}
 
 	// Test Case ID: 9
-	// Test Case Description: InecoSave link functionality checking
+	// Test Case Description: InecoSaveAccounts link functionality checking
 	@Test
-	public void inecoSaveLinkFunctionalityTest() {
+	public void inecoSaveAccountsLinkFunctionalityTest() {
 		InecoBankMenuPage pages = new InecoBankMenuPage(driver);
 		// Step 9.2: Hover on the Accounts button from menu bar
 		pages.hoverOnElement(pages.accountsBtn);
-		pages.waitForElementPresent(pages.inecoSaveBtn);
+		pages.waitForElementPresent(pages.inecoSaveAccountsBtn);
 		// Step 9.3: Click on Standard button from opened option
-		InecoBankInecoSavePage page = pages.goToInecoSavePage();
+		InecoBankInecoSavePage page = pages.goToInecoSaveAccountsPage();
 		page.waitForElementPresent(page.inecoSaveText);
 		Assert.assertTrue(page.isElementPresent(InecoBankInecoSavePageXpaths.INECO_SAVE_TEXT));
 	}
@@ -143,7 +155,7 @@ public class InecoBankMenuPageTest extends InecoBankBaseTest {
 		InecoBankMenuPage pages = new InecoBankMenuPage(driver);
 		// Step 10.2: Hover on the Accounts button from menu bar
 		pages.hoverOnElement(pages.accountsBtn);
-		pages.waitForElementPresent(pages.inecoSaveBtn);
+		pages.waitForElementPresent(pages.escrowBtn);
 		// Step 10.3: Click on Escrow button from opened option
 		InecoBankEscrowPage page = pages.goToEscrowPage();
 		page.waitForElementPresent(page.escrowText);
@@ -166,7 +178,7 @@ public class InecoBankMenuPageTest extends InecoBankBaseTest {
 	
 	
 	// Test Case ID: 12
-	// Test Case Description: Pension link functionality Checking
+	// Test Case Description: Social link functionality Checking
 	@Test
 	public void socialLinkFunctionalityTest() {
 		InecoBankMenuPage pages = new InecoBankMenuPage(driver);
@@ -179,4 +191,103 @@ public class InecoBankMenuPageTest extends InecoBankBaseTest {
 		Assert.assertTrue(page.isElementPresent(InecoBankSocialPageXpaths.SOCIAL_TEXT));
 	}
 	
+	// Test Case ID: 13
+	// Test Case Description: Deposits link functionality checking
+	@Test
+	public void depositsLinkFunctionalityTest() {
+		InecoBankMenuPage pages = new InecoBankMenuPage(driver);
+		// Step 13.2: Hover on the Savings button from menu bar
+		pages.hoverOnElement(pages.savingsBtn);
+		pages.waitForElementPresent(pages.depositsBtn);
+		// Step 13.3: Click on Deposits button from opened option
+		InecoBankDepositsPage page = pages.goToDepositsPage();
+		page.waitForElementPresent(page.depositsText);
+		Assert.assertTrue(page.isElementPresent(InecoBankDepositsPageXpaths.DEPOSITS_TEXT));
+	}
+	
+	// Test Case ID: 14
+	// Test Case Description: Simple Deposit link functionality checking
+	@Test
+	public void simpleDepositLinkFunctionalityTest() {
+		InecoBankMenuPage pages = new InecoBankMenuPage(driver);
+		// Step 14.2: Hover on the Savings button from menu bar
+		pages.hoverOnElement(pages.savingsBtn);
+		pages.waitForElementPresent(pages.simpleDepositBtn);
+		// Step 14.3: Click on Simple Deposit button from opened option
+		InecoBankSimpleDepositPage page = pages.goToSimpleDepositPage();
+		page.waitForElementPresent(page.simpleDepositText);
+		Assert.assertTrue(page.isElementPresent(InecoBankSimpleDepositPageXpaths.SIMPLE_DEPOSIT_TEXT));
+	}
+	
+	// Test Case ID: 15
+	// Test Case Description: Flexible Deposit link functionality checking
+	@Test
+	public void flexibleDepositLinkFunctionalityTest() {
+		InecoBankMenuPage pages = new InecoBankMenuPage(driver);
+		// Step 15.2: Hover on the Savings button from menu bar
+		pages.hoverOnElement(pages.savingsBtn);
+		pages.waitForElementPresent(pages.flexibleDepositBtn);
+		// Step 15.3: Click on Flexible button from opened option
+		InecoBankFlexibleDepositPage page = pages.goToFlexibleDepositPage();
+		page.waitForElementPresent(page.flexibleDepositText);
+		Assert.assertTrue(page.isElementPresent(InecoBankFlexibleDepositPageXpaths.FLEXIBLE_DEPOSIT_TEXT));
+	}
+	
+	// Test Case ID: 16
+	// Test Case Description: InecoSaveAccounts link functionality checking
+	@Test
+	public void inecoSaveSavingsLinkFunctionalityTest() {
+		InecoBankMenuPage pages = new InecoBankMenuPage(driver);
+		// Step 16.2: Hover on the Savings button from menu bar
+		pages.hoverOnElement(pages.savingsBtn);
+		pages.waitForElementPresent(pages.inecoSaveSavingsBtn);
+		// Step 16.3: Click on Ineco Save button from opened option
+		InecoBankInecoSavePage page = pages.goToInecoSaveSavingsPage();
+		page.waitForElementPresent(page.inecoSaveText);
+		Assert.assertTrue(page.isElementPresent(InecoBankInecoSavePageXpaths.INECO_SAVE_TEXT));
+	}
+	
+	// Test Case ID: 17
+	// Test Case Description: Purpose link functionality checking
+	@Test
+	public void purposeLinkFunctionalityTest() {
+		InecoBankMenuPage pages = new InecoBankMenuPage(driver);
+		// Step 17.2: Hover on the Savings button from menu bar
+		pages.hoverOnElement(pages.savingsBtn);
+		pages.waitForElementPresent(pages.purposeBtn);
+		// Step 17.3: Click on Purpose button from opened option
+		InecoBankPurposePage page = pages.goToPurposePage();
+		page.waitForElementPresent(page.purposeText);
+		Assert.assertTrue(page.isElementPresent(InecoBankPurposePageXpaths.PURPOSE_TEXT));
+	}
+	
+	// Test Case ID: 18
+	// Test Case Description: Bonds link functionality checking
+	@Test
+	public void bondsLinkFunctionalityTest() {
+		InecoBankMenuPage pages = new InecoBankMenuPage(driver);
+		// Step 18.2: Hover on the Savings button from menu bar
+		pages.hoverOnElement(pages.savingsBtn);
+		pages.waitForElementPresent(pages.bondsBtn);
+		// Step 18.3: Click on Bonds button from opened option
+		InecoBankBondsPage page = pages.goToBondsPage();
+		page.waitForElementPresent(page.bondsText);
+		Assert.assertTrue(page.isElementPresent(InecoBankBondsPageXpaths.BONDS_TEXT));
+	}
+	
+	
+	// Test Case ID: 20
+	// Test Case Description: 1 CLICK Online Loans link functionality checking
+	@Test
+	public void clickOnlineLoansLinkFunctionalityTest() {
+		InecoBankMenuPage pages = new InecoBankMenuPage(driver);
+		// Step 20.2: Hover on the Loans button from menu bar
+		pages.hoverOnElement(pages.loansBtn);
+		pages.waitForElementPresent(pages.clickOnlineLoansBtn);
+		// Step 20.3: Click on Bonds button from opened option
+		InecoBankClickOnlineLoansPage page = pages.goToClickOnlineLoansPage();
+		page.waitForElementPresent(page.clickOnlineLoansText);
+		Assert.assertTrue(page.isElementPresent(InecoBankClickOnlineLoansPageXpaths.CLICK_ONLINE_LOANS_TEXT));
+	}
+
 }

@@ -7,9 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class InecoBankBasePageObject {
+public class InecoBankBasePageObject{
 
 	protected WebDriver driver;
+	
 
 	public InecoBankBasePageObject(WebDriver driver) {
 		this.driver = driver;

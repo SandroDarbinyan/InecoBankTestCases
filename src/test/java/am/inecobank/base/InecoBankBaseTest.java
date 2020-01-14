@@ -1,22 +1,30 @@
 package am.inecobank.base;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import am.inecobank.dataProvider.ConfigFileReader;
+
 public class InecoBankBaseTest {
 	
- protected	WebDriver driver;
-	
+  protected	WebDriver driver;
+  ConfigFileReader configFileReader;
+  
 	@BeforeClass
-	public void prepareEnv() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver_win32\\chromedriver.exe");
+	public void prepareEnv() throws IOException {
+		
+		 configFileReader= new ConfigFileReader();
+			
+		System.setProperty("webdriver.chrome.driver", configFileReader.getDriverPath());
 		driver = new ChromeDriver();
 		
 		//Step *.1: Navigate to www.inecobank.am/en/Individual
-		driver.get("https://www.inecobank.am/en/Individual");
+		driver.get(configFileReader.getUrl());
 
 		driver.manage().window().maximize();
 		String title =  driver.getTitle();
