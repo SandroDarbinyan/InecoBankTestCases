@@ -22,4 +22,10 @@ public class InecoBankMenuPageXpaths {
 	public static final String BONDS_BTN = "//a[@class='link' and text()='Bonds']";
 	public static final String LOANS_BTN = "//span[contains(@class,'action--n') and text()='Loans']";
 	public static final String CLICK_ONLINE_LOANS_BTN = "//a[@class='link' and text()='1 CLICK Online Loans']";
+	public static final String CONSUMER_LOANS_BTN = "//a[@class='link' and text()='Consumer Loans']";
+	public static final String EX_CONSUMER_LOANS_BTN = "//a[@class='link' and text()='Express Consumer Loans']";
+	public static final String COLLATERAL_SECURED_BTN = "//a[@class='link' and text()='Collateral Secured']";
+	public static final String GOLD_PLEDGE_SECURED_BTN = "//a[@class='link' and text()='Gold Pledge Secured']";
+	public static final String DEPOSIT_SECURED_BTN = "//a[@class='link' and text()='Deposit Secured']";
+	public static final String MORTGAGE_LOANS_BTN = "//a[@class='link' and text()='Mortgage Loans']";
 }

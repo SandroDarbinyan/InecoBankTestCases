@@ -7,14 +7,20 @@ import org.openqa.selenium.support.FindBy;
 
 import am.inecbank.pages.social.InecoBankSocialPage;
 import am.inecobank.inecoSave.InecoBankInecoSavePage;
+import am.inecobank.pages.GoldPledgeSecured.InecoBankGoldPledgeSecuredPage;
 import am.inecobank.pages.accountPackages.InecoBankAccountPackagesPage;
 import am.inecobank.pages.base.InecoBankBasePageObject;
 import am.inecobank.pages.bonds.InecoBankBondsPage;
 import am.inecobank.pages.clickOnlineLoans.InecoBankClickOnlineLoansPage;
+import am.inecobank.pages.collateralSecured.InecoBankCollateralSecuredPage;
+import am.inecobank.pages.consumerLoans.InecoBankConsumerLoansPage;
+import am.inecobank.pages.depositSecured.InecoBankDepositSecuredPage;
 import am.inecobank.pages.deposits.InecoBankDepositsPage;
 import am.inecobank.pages.escrow.InecoBankEscrowPage;
+import am.inecobank.pages.expressConsumerLoans.InecoBankExpressConsumerLoansPage;
 import am.inecobank.pages.flexibleDeposit.InecoBankFlexibleDepositPage;
 import am.inecobank.pages.inecoOne.InecoBankInecoOnePage;
+import am.inecobank.pages.mortgageLoans.InecoBankMortgageLoansPage;
 import am.inecobank.pages.pension.InecoBankPensionPage;
 import am.inecobank.pages.purpose.InecoBankPurposePage;
 import am.inecobank.pages.signIn.InecoBankSignInPage;
@@ -88,6 +94,26 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 	
 	@FindBy(xpath = InecoBankMenuPageXpaths.CLICK_ONLINE_LOANS_BTN)
     public WebElement clickOnlineLoansBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.CONSUMER_LOANS_BTN)
+	public WebElement consumerLoansBtn;
+
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.EX_CONSUMER_LOANS_BTN)
+	public WebElement exConsumerLoansBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.COLLATERAL_SECURED_BTN)
+	public WebElement collateralSecuredBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.GOLD_PLEDGE_SECURED_BTN)
+	public WebElement goldPledgeSecuredBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.DEPOSIT_SECURED_BTN)
+	public WebElement depositSecuredBtn;
+	
+	@FindBy(xpath = InecoBankMenuPageXpaths.MORTGAGE_LOANS_BTN)
+	public WebElement mortgageLoansBtn;
+	
 	
 	public InecoBankSignInPage goToSignInPage() {
 		signInBtn.click();
@@ -182,5 +208,35 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 		return new InecoBankClickOnlineLoansPage(driver);
 	}
 	
+	
+	public InecoBankConsumerLoansPage goToConsumerLoansPage() {
+		consumerLoansBtn.click();
+		return new InecoBankConsumerLoansPage(driver);
+	}
+	
+	public InecoBankExpressConsumerLoansPage goToExpressConsumerLoansPage() {
+		exConsumerLoansBtn.click();
+		return new InecoBankExpressConsumerLoansPage(driver);
+	}
+	
+	public InecoBankCollateralSecuredPage goToCollateralSecuredPage() {
+		collateralSecuredBtn.click();
+		return new InecoBankCollateralSecuredPage(driver);
+	}
+	
+	public InecoBankGoldPledgeSecuredPage goToGoldPledgeSecuredPage() {
+		goldPledgeSecuredBtn.click();
+		return new InecoBankGoldPledgeSecuredPage(driver);
+	}
+	
+	public InecoBankDepositSecuredPage goToDepositSecuredPage() {
+		depositSecuredBtn.click();
+		return new InecoBankDepositSecuredPage(driver);
+	}
+	
+	public InecoBankMortgageLoansPage goToMortgageLoansPage() {
+		mortgageLoansBtn.click();
+		return new InecoBankMortgageLoansPage(driver);
+	}
 	
 }

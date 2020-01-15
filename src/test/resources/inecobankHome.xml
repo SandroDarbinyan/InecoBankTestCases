@@ -3,8 +3,9 @@
 <suite name="InecoBank" verbose="1">
 	<test name="Pages">
 		<classes>
-			<class name="am.inecobank.header.InecoBankHeaderPageTest"/> 
-			<class name="am.inecobank.menu.InecoBankMenuPageTest"></class>
+			<class name="am.inecobank.header.InecoBankHeaderPageTest" />
+			<class name="am.inecobank.menu.InecoBankMenuPageTest">
+			</class>
 		</classes>
 	</test>
 </suite>
