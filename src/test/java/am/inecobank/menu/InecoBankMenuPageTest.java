@@ -71,7 +71,7 @@ public class InecoBankMenuPageTest extends InecoBankBaseTest {
 		}
 
 		// Perform the actions on new window
-		page.waitForElementPresent(page.logIn);
+		page.waitForElementPresent(page.logInBtn);
 		Assert.assertTrue(page.isElementPresent(InecoBankSignInPageXpaths.LOG_IN));
 
 		// Close the new window, if that window no more required

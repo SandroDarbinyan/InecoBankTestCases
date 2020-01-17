@@ -3,8 +3,12 @@
 <suite name="InecoBank" verbose="1">
 	<test name="Pages">
 		<classes>
-			<class name="am.inecobank.header.InecoBankHeaderPageTest" />
-			<class name="am.inecobank.menu.InecoBankMenuPageTest">
+	<!-- <class name="am.inecobank.header.InecoBankHeaderPageTest" /> 
+	     <class name="am.inecobank.menu.InecoBankMenuPageTest"/>  -->
+		 <class name="am.inecobank.signIn.InecoBankSignInPageTest">
+			 <methods>
+			      <include name="signInTest8"/>
+			</methods> 
 			</class>
 		</classes>
 	</test>
