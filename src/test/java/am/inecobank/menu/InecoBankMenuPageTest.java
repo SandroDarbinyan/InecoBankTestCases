@@ -4,8 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import am.inecobank.base.InecoBankBaseTest;
-import am.inecobank.inecoSave.InecoBankInecoSavePage;
-import am.inecobank.inecoSave.InecoBankInecoSavePageXpaths;
 import am.inecobank.pages.GoldPledgeSecured.InecoBankGoldPledgeSecuredPage;
 import am.inecobank.pages.GoldPledgeSecured.InecoBankGoldPledgeSecuredPageXpaths;
 import am.inecobank.pages.accountPackages.InecoBankAccountPackagesPage;
@@ -30,6 +28,8 @@ import am.inecobank.pages.flexibleDeposit.InecoBankFlexibleDepositPage;
 import am.inecobank.pages.flexibleDeposit.InecoBankFlexibleDepositPageXpaths;
 import am.inecobank.pages.inecoOne.InecoBankInecoOnePage;
 import am.inecobank.pages.inecoOne.InecoBankInecoOnePageXpaths;
+import am.inecobank.pages.inecoSave.InecoBankInecoSavePage;
+import am.inecobank.pages.inecoSave.InecoBankInecoSavePageXpaths;
 import am.inecobank.pages.menu.InecoBankMenuPage;
 import am.inecobank.pages.mortgageLoans.InecoBankMortgageLoansPage;
 import am.inecobank.pages.mortgageLoans.InecoBankMortgageLoansPageXpaths;

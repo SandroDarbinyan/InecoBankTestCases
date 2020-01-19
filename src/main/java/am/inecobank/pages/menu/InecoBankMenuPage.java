@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-import am.inecobank.inecoSave.InecoBankInecoSavePage;
 import am.inecobank.pages.GoldPledgeSecured.InecoBankGoldPledgeSecuredPage;
 import am.inecobank.pages.accountPackages.InecoBankAccountPackagesPage;
 import am.inecobank.pages.base.InecoBankBasePageObject;
@@ -19,6 +18,7 @@ import am.inecobank.pages.escrow.InecoBankEscrowPage;
 import am.inecobank.pages.expressConsumerLoans.InecoBankExpressConsumerLoansPage;
 import am.inecobank.pages.flexibleDeposit.InecoBankFlexibleDepositPage;
 import am.inecobank.pages.inecoOne.InecoBankInecoOnePage;
+import am.inecobank.pages.inecoSave.InecoBankInecoSavePage;
 import am.inecobank.pages.mortgageLoans.InecoBankMortgageLoansPage;
 import am.inecobank.pages.pension.InecoBankPensionPage;
 import am.inecobank.pages.purpose.InecoBankPurposePage;

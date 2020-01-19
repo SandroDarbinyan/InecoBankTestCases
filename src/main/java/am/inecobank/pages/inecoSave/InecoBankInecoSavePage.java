@@ -1,4 +1,4 @@
-package am.inecobank.inecoSave;
+package am.inecobank.pages.inecoSave;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
