@@ -34,7 +34,7 @@ public class InecoBankSignInPageTest extends InecoBankBaseTest{
 		page.fillUserName("darbinyan.sandro");
 		
 		// Step 26.4: Enter Password
-		page.fillpassword("account1");
+		page.fillpassword("account20");
 		
 		// Step	26.5.Click Log In button
 		page.clickOnLoginBtn();
@@ -258,7 +258,7 @@ public class InecoBankSignInPageTest extends InecoBankBaseTest{
 		page.fillUserName("darbinyan.sandro");
 
 		// Step 32.4: Enter Password
-		page.fillpassword("account1");
+		page.fillpassword("account20");
 
 		// Step 32.5.Click Log In button
 		page.logInBtn.sendKeys(Keys.ENTER);
@@ -297,7 +297,7 @@ public class InecoBankSignInPageTest extends InecoBankBaseTest{
 		page.fillUserName("darbinyan.sandro");
 
 		// Step 33.4: Enter Password
-		page.fillpassword("account1");
+		page.fillpassword("account20");
 
 		// Step 33.5.Click Log In button
 		page.logInBtn.sendKeys(Keys.ENTER);
