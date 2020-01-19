@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-import am.inecbank.pages.social.InecoBankSocialPage;
 import am.inecobank.inecoSave.InecoBankInecoSavePage;
 import am.inecobank.pages.GoldPledgeSecured.InecoBankGoldPledgeSecuredPage;
 import am.inecobank.pages.accountPackages.InecoBankAccountPackagesPage;
@@ -26,6 +25,7 @@ import am.inecobank.pages.purpose.InecoBankPurposePage;
 import am.inecobank.pages.signIn.InecoBankSignInPage;
 import am.inecobank.pages.signUp.InecoBankSignUpPage;
 import am.inecobank.pages.simpleDeposit.InecoBankSimpleDepositPage;
+import am.inecobank.pages.social.InecoBankSocialPage;
 import am.inecobank.pages.specialAccounts.InecoBankSpecialAccountsPage;
 import am.inecobank.pages.standard.InecoBankStandardPage;
 

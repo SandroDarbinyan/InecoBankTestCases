@@ -1,4 +1,4 @@
-package am.inecbank.pages.social;
+package am.inecobank.pages.social;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

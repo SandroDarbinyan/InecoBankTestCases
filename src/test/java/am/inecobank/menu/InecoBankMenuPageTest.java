@@ -3,8 +3,6 @@ package am.inecobank.menu;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import am.inecbank.pages.social.InecoBankSocialPage;
-import am.inecbank.pages.social.InecoBankSocialPageXpaths;
 import am.inecobank.base.InecoBankBaseTest;
 import am.inecobank.inecoSave.InecoBankInecoSavePage;
 import am.inecobank.inecoSave.InecoBankInecoSavePageXpaths;
@@ -45,6 +43,8 @@ import am.inecobank.pages.signUp.InecoBankSignUpPage;
 import am.inecobank.pages.signUp.InecoBankSignUpPageXpaths;
 import am.inecobank.pages.simpleDeposit.InecoBankSimpleDepositPage;
 import am.inecobank.pages.simpleDeposit.InecoBankSimpleDepositPageXpaths;
+import am.inecobank.pages.social.InecoBankSocialPage;
+import am.inecobank.pages.social.InecoBankSocialPageXpaths;
 import am.inecobank.pages.specialAccounts.InecoBankSpecialAccountsPage;
 import am.inecobank.pages.specialAccounts.InecoBankSpecialAccountsPageXpaths;
 import am.inecobank.pages.standard.InecoBankStandardPage;
