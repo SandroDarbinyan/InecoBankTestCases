@@ -12,7 +12,7 @@ public class InecoBankHomePage extends InecoBankMenuPage{
 		super(driver);
 	}
 	
-	@FindBy(xpath = InecoBankHomePageXpaths.HOME_ELEMENT)
-	public	WebElement element;
+	@FindBy(xpath = InecoBankHomePageXpaths.HOME_PAGE_TEXT)
+	public	WebElement homePageText;
 
 }

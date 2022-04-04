@@ -6,12 +6,12 @@ import org.openqa.selenium.support.FindBy;
 
 import am.inecobank.pages.menu.InecoBankMenuPage;
 
-public class InecoBankSocialPage extends InecoBankMenuPage{
+public class InecoBankSocialPackagePage extends InecoBankMenuPage{
 
-	public InecoBankSocialPage(WebDriver driver) {
+	public InecoBankSocialPackagePage(WebDriver driver) {
 		super(driver);
 	}
-	@FindBy(xpath = InecoBankSocialPageXpaths.SOCIAL_TEXT)
+	@FindBy(xpath = InecoBankSocialPackagePageXpaths.SOCIAL_PACKAGE_TEXT)
 	public WebElement socialText;
 
 }
