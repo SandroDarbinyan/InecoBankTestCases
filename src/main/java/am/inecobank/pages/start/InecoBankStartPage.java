@@ -1,4 +1,4 @@
-package am.inecobank.pages.inecoOne;
+package am.inecobank.pages.start;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,12 +6,12 @@ import org.openqa.selenium.support.FindBy;
 
 import am.inecobank.pages.menu.InecoBankMenuPage;
 
-public class InecoBankInecoOnePage extends InecoBankMenuPage{
+public class InecoBankStartPage extends InecoBankMenuPage{
 
-	public InecoBankInecoOnePage(WebDriver driver) {
+	public InecoBankStartPage(WebDriver driver) {
 		super(driver);
 	}
-	@FindBy(xpath = InecoBankInecoOnePageXpaths.TEXT)
+	@FindBy(xpath = InecoBankStartPageXpaths.TEXT)
 	public WebElement text;
 
 }

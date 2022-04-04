@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import am.inecobank.pages.GoldPledgeSecured.InecoBankGoldPledgeSecuredPage;
-import am.inecobank.pages.accountPackages.InecoBankAccountPackagesPage;
+import am.inecobank.pages.accountPackages.InecoBankPlusPage;
 import am.inecobank.pages.base.InecoBankBasePageObject;
 import am.inecobank.pages.bonds.InecoBankBondsPage;
 import am.inecobank.pages.clickOnlineLoans.InecoBankClickOnlineLoansPage;
@@ -17,17 +17,17 @@ import am.inecobank.pages.deposits.InecoBankDepositsPage;
 import am.inecobank.pages.escrow.InecoBankEscrowPage;
 import am.inecobank.pages.expressConsumerLoans.InecoBankExpressConsumerLoansPage;
 import am.inecobank.pages.flexibleDeposit.InecoBankFlexibleDepositPage;
-import am.inecobank.pages.inecoOne.InecoBankInecoOnePage;
+import am.inecobank.pages.start.InecoBankStartPage;
 import am.inecobank.pages.inecoSave.InecoBankInecoSavePage;
-import am.inecobank.pages.mortgageLoans.InecoBankMortgageLoansPage;
-import am.inecobank.pages.pension.InecoBankPensionPage;
+import am.inecobank.pages.collateral.InecoBankCollateralPage;
+import am.inecobank.pages.socialInsurance.InecoBankSocialInsurancePage;
 import am.inecobank.pages.purpose.InecoBankPurposePage;
 import am.inecobank.pages.signIn.InecoBankSignInPage;
 import am.inecobank.pages.signUp.InecoBankSignUpPage;
 import am.inecobank.pages.simpleDeposit.InecoBankSimpleDepositPage;
-import am.inecobank.pages.social.InecoBankSocialPage;
+import am.inecobank.pages.social.InecoBankSocialPackagePage;
 import am.inecobank.pages.specialAccounts.InecoBankSpecialAccountsPage;
-import am.inecobank.pages.standard.InecoBankStandardPage;
+import am.inecobank.pages.basic.InecoBankBasicPage;
 
 public class InecoBankMenuPage extends InecoBankBasePageObject{
 
@@ -44,14 +44,14 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 	@FindBy(xpath = InecoBankMenuPageXpaths.ACCOUNTS_BTN)
     public WebElement accountsBtn;
 	
-	@FindBy(xpath = InecoBankMenuPageXpaths.INECO_ONE_BTN)
-	WebElement inecoOneBtn;
+	@FindBy(xpath = InecoBankMenuPageXpaths.START_BTN)
+	WebElement startBtn;
 	
-	@FindBy(xpath = InecoBankMenuPageXpaths.STANDARD_BTN)
-	WebElement standardBtn;
+	@FindBy(xpath = InecoBankMenuPageXpaths.BASIC_BTN)
+	WebElement basicBtn;
 	
-	@FindBy(xpath = InecoBankMenuPageXpaths.ACCOUNT_PACKAGES_BTN)
-	WebElement accountPackagesBtn;
+	@FindBy(xpath = InecoBankMenuPageXpaths.PLUS_BTN)
+	WebElement plusBtn;
 	
 	@FindBy(xpath = InecoBankMenuPageXpaths.SPECIAL_ACCOUNTS_BTN)
 	public WebElement specialAccountsBtn;
@@ -62,11 +62,11 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 	@FindBy(xpath = InecoBankMenuPageXpaths.ESCROW_BTN)
 	public WebElement escrowBtn;
 	
-	@FindBy(xpath = InecoBankMenuPageXpaths.PENSION_BTN)
-	public WebElement pensionBtn;
+	@FindBy(xpath = InecoBankMenuPageXpaths.SOCIAL_INSURANCE_BTN)
+	public WebElement socialInsuranceBtn;
 	
-	@FindBy(xpath = InecoBankMenuPageXpaths.SOCIAL_BTN)
-	public WebElement socialBtn;
+	@FindBy(xpath = InecoBankMenuPageXpaths.SOCIAL_PACKAGE_BTN)
+	public WebElement socialPackageBtn;
 	
 	@FindBy(xpath = InecoBankMenuPageXpaths.SAVINGS_BTN)
     public WebElement savingsBtn;
@@ -111,8 +111,8 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 	@FindBy(xpath = InecoBankMenuPageXpaths.DEPOSIT_SECURED_BTN)
 	public WebElement depositSecuredBtn;
 	
-	@FindBy(xpath = InecoBankMenuPageXpaths.MORTGAGE_LOANS_BTN)
-	public WebElement mortgageLoansBtn;
+	@FindBy(xpath = InecoBankMenuPageXpaths.COLLATERAL_BTN)
+	public WebElement collateralBtn;
 	
 	
 	public InecoBankSignInPage goToSignInPage() {
@@ -131,19 +131,19 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 		return new InecoBankMenuPage(driver);
 	}
 	
-	public InecoBankInecoOnePage goToInecoOnePage() {
-		inecoOneBtn.click();
-		return new InecoBankInecoOnePage(driver);
+	public InecoBankStartPage goToStartPage() {
+		startBtn.click();
+		return new InecoBankStartPage(driver);
 	}
 	
-	public InecoBankStandardPage goToStandardPage() {
-		standardBtn.click();
-		return new InecoBankStandardPage(driver);
+	public InecoBankBasicPage goToBasicPage() {
+		basicBtn.click();
+		return new InecoBankBasicPage(driver);
 	}
 	
-	public InecoBankAccountPackagesPage goToAccountPackagesPage() {
-		accountPackagesBtn.click();
-		return new InecoBankAccountPackagesPage(driver);
+	public InecoBankPlusPage goToPlusPage() {
+		plusBtn.click();
+		return new InecoBankPlusPage(driver);
 	}
 	
 	public InecoBankSpecialAccountsPage goToSpecialAccountsPage() {
@@ -161,14 +161,14 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 		return new InecoBankEscrowPage(driver);
 	}
 	
-	public InecoBankPensionPage goToPensionPage() {
-		pensionBtn.click();
-		return new InecoBankPensionPage(driver);
+	public InecoBankSocialInsurancePage goToPensionPage() {
+		socialInsuranceBtn.click();
+		return new InecoBankSocialInsurancePage(driver);
 	}
 	
-	public InecoBankSocialPage goToSocialPage() {
-		socialBtn.click();
-		return new InecoBankSocialPage(driver);
+	public InecoBankSocialPackagePage goToSocialPage() {
+		socialPackageBtn.click();
+		return new InecoBankSocialPackagePage(driver);
 	}
 	
 	
@@ -234,9 +234,9 @@ public class InecoBankMenuPage extends InecoBankBasePageObject{
 		return new InecoBankDepositSecuredPage(driver);
 	}
 	
-	public InecoBankMortgageLoansPage goToMortgageLoansPage() {
-		mortgageLoansBtn.click();
-		return new InecoBankMortgageLoansPage(driver);
+	public InecoBankCollateralPage goToMortgageLoansPage() {
+		collateralBtn.click();
+		return new InecoBankCollateralPage(driver);
 	}
 	
 }

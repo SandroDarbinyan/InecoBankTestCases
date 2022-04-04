@@ -15,7 +15,7 @@ public class InecoBankHeaderPage extends InecoBankBasePageObject {
 	}
 
 	@FindBy(xpath = InecoBankHeaderPageXpaths.MAP_BTN)
-	WebElement mapBtn;
+	public WebElement mapBtn;
 	
 	@FindBy(xpath = InecoBankHeaderPageXpaths.INDIVIDUALS_BTN)
 	WebElement individualsBtn;

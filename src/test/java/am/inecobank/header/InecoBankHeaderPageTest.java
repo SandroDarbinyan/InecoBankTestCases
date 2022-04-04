@@ -30,8 +30,7 @@ public class InecoBankHeaderPageTest extends InecoBankBaseTest {
 		InecoBankHeaderPage pages = new InecoBankHeaderPage(driver);
 		// Step 4.2: Click on the Individuals button
 		InecoBankHomePage page = pages.clickOnIndividualsBtn();
-		page.waitForElementPresent(page.element);
-		Assert.assertTrue(page.isElementPresent(InecoBankHomePageXpaths.HOME_ELEMENT));
+		page.waitForElementPresent(page.homePageText);
+		Assert.assertTrue(page.isElementPresent(InecoBankHomePageXpaths.HOME_PAGE_TEXT));
 	}
-
 }

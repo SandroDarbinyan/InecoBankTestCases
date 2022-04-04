@@ -18,7 +18,7 @@ public class InecoBankBasePageObject{
 	}
 	
 	public void waitForElementPresent(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver,40);
+		WebDriverWait wait = new WebDriverWait(driver,10);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
